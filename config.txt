@@ -1,0 +1,6 @@
+gmailuser:
+gmailpass:
+yahoouser:
+yahoopass:
+totalPersonPerDay:180
+timePerSendMailMin:3
