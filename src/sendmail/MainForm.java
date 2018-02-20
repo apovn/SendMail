@@ -49,14 +49,9 @@ public class MainForm extends javax.swing.JFrame {
      * Creates new form MainForm
      */
     public MainForm() {
-        try {
-            checkLicense();
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            initComponents();
-            initValue();
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
-            Logger.getLogger(MainForm.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        checkLicense();
+        initComponents();
+        initValue();
     }
 
     /**
@@ -321,7 +316,7 @@ public class MainForm extends javax.swing.JFrame {
     private void checkLicense() {
         try {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            Date expireDate = sdf.parse("2016-9-30");
+            Date expireDate = sdf.parse("2018-9-30");
             Date today = new Date();
 
             if (expireDate.before(today)) {
